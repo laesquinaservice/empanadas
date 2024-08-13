@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap components that use jQuery) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <style>
-        body{
+        body {
             background-color: black;
+            color: white;
         }
         img {
             position: relative;
             margin: 0 auto;
         }
         a {
+            font-weight: bold;
             color: white;
-            margin: 2rem 0;
+            margin: 3rem 0;
             text-decoration: none;
+            font-size: 1rem;
         }
         ul {
             list-style-type: disc;
@@ -27,21 +39,62 @@
 </head>
 
 <body>
-    <img src="top.PNG" alt="" >
+    <img src="top.PNG" alt="">
     <ul>
-        <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595">CONTROL DE INGRESOS Y EGRESOS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1Nejucnex2Srpadm36DQYM-8Pfs8R0bcMCt_Woo2VjjA/edit?gid=0#gid=0">CONTROL DE INVENTARIO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1R2wNwts_m-hTgeHmfSopzi_rkxPON5rJhqkxmEBsW78/edit?usp=drive_link">COMPRAS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1jzoBN4pW8LshIFg047iEe8r4f-woVgfUyHgJki-C17Y/edit?usp=drive_link">REMISIONES COLOMBIA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link">NOMINA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link">FACTURA NÓMINA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link">HORAS EXTRAS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link">PRÉSTAMOS,DESCUADRE,CONSUMO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1H39me4wDP0_flH4MmJmEdSgabZ9uQvU1zRfGpA8vgWk/edit?usp=drive_link">REMISIONES SAN JAVIER</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1AvgSLPZKMx7IWDKCo5hMSLUjd4Lmk6_Wa_f2lrPmikc/edit?usp=drive_link">REMISIONES UNICENTRO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/14g7gDYysb5TUIjrE1zb8oFe1XXQ_42Qh_AbDUohnoi4/edit?usp=drive_link">REMISIONES MOTA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1mazP3FL4ukftvxqzt1FOADJ961PRjDa7Ll6TVoGARUA/edit?usp=drive_link">REMISIONES AMÉRICA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1IYsgG0FFrWZf8Al6Wvdp7DMk6PMkBPznJqcIuOAOZxM/edit?usp=drive_link">TRANSFERENCIAS</a></li>
+        <!-- Links will have onclick to show modal -->
+        <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595" onclick="showModal(event)">CONTROL DE INGRESOS Y EGRESOS</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1Nejucnex2Srpadm36DQYM-8Pfs8R0bcMCt_Woo2VjjA/edit?gid=0#gid=0" onclick="showModal(event)">CONTROL DE INVENTARIO</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1R2wNwts_m-hTgeHmfSopzi_rkxPON5rJhqkxmEBsW78/edit?usp=drive_link" onclick="showModal(event)">COMPRAS</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1jzoBN4pW8LshIFg047iEe8r4f-woVgfUyHgJki-C17Y/edit?usp=drive_link" onclick="showModal(event)">REMISIONES COLOMBIA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link" onclick="showModal(event)">NOMINA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1H39me4wDP0_flH4MmJmEdSgabZ9uQvU1zRfGpA8vgWk/edit?usp=drive_link" onclick="showModal(event)">REMISIONES SAN JAVIER</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1AvgSLPZKMx7IWDKCo5hMSLUjd4Lmk6_Wa_f2lrPmikc/edit?usp=drive_link" onclick="showModal(event)">REMISIONES UNICENTRO</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/14g7gDYysb5TUIjrE1zb8oFe1XXQ_42Qh_AbDUohnoi4/edit?usp=drive_link" onclick="showModal(event)">REMISIONES MOTA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1mazP3FL4ukftvxqzt1FOADJ961PRjDa7Ll6TVoGARUA/edit?usp=drive_link" onclick="showModal(event)">REMISIONES AMÉRICA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1IYsgG0FFrWZf8Al6Wvdp7DMk6PMkBPznJqcIuOAOZxM/edit?usp=drive_link" onclick="showModal(event)">TRANSFERENCIAS</a></li>
+        <!-- Add other links here with the same onclick function -->
     </ul>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingrese su contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="password" id="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="validatePassword()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let targetUrl = '';
+
+        function showModal(event) {
+            event.preventDefault();
+            targetUrl = event.target.href;
+            var myModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            if (password === '123') {
+                window.location.href = targetUrl;
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        }
+    </script>
 </body>
 </html>
