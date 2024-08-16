@@ -3,43 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Empanas las Calidosas</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- jQuery (necessary for Bootstrap components that use jQuery) -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap components that use jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <style>
         body {
             background-color: black;
             color: white;
         }
         img {
-            position: relative;
+            display: block;
             margin: 0 auto;
         }
         a {
             font-weight: bold;
             color: white;
-            margin: 3rem 0;
             text-decoration: none;
             font-size: 1rem;
         }
         ul {
             list-style-type: disc;
             display: grid;
-            grid-template-columns: 30% 30%;
-            grid-template-rows: auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+        }
+        .modal-content {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <img src="top.PNG" alt="">
+    <img src="top.PNG" alt="Top Image">
+
     <ul>
         <!-- Links will have onclick to show modal -->
         <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595" onclick="showModal(event)">CONTROL DE INGRESOS Y EGRESOS</a></li>
@@ -53,12 +57,11 @@
         <li><a href="https://docs.google.com/spreadsheets/d/1mazP3FL4ukftvxqzt1FOADJ961PRjDa7Ll6TVoGARUA/edit?usp=drive_link" onclick="showModal(event)">REMISIONES AMÉRICA</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1IYsgG0FFrWZf8Al6Wvdp7DMk6PMkBPznJqcIuOAOZxM/edit?usp=drive_link" onclick="showModal(event)">TRANSFERENCIAS</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1T5rgyfZ1DqLF7nCL2qw850G-zMD-ToudJBcdgQo0wHU/edit?usp=drive_link" onclick="showModal(event)">DESPACHOS PRODUCCION</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1TSYO7z8NibD5Gj-ptwJJFoOMGHYihe3JhNK4QWtIu40/edit?usp=drive_link" onclick="showModal(event)">PEDIDOS UNICENTRO</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1km4l9MG0tbd8agAly1ly73-N6WBYcfGds_8V8H9oQfg/edit?usp=drive_link" onclick="showModal(event)">PEDIDOS SAN JAVIER</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1z2QhfFNWyA8nBEhrxYpzQojzmW-LDywO074DCz0gpUQ/edit?usp=drive_link" onclick="showModal(event)">PEDIDOS COLOMBIA</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1anceg3K-MJ5iOHkyc-yvu2GAh5qnkJLiEolpb4OqQqk/edit?usp=drive_link" onclick="showModal(event)">PEDIDOS LA MOTA</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1GNnETTVIAsqOUoLWXxZLPgSUcsVc5wOJL3yj4HCEVTc/edit?usp=drive_link" onclick="showModal(event)">PEDIDOS AMERICA</a></li>
-        <!-- Add other links here with the same onclick function -->
+        <li><a href="https://docs.google.com/spreadsheets/d/1TSYO7z8NibD5Gj-ptwJJFoOMGHYihe3JhNK4QWtIu40/edit?usp=drive_link" onclick="showModal(event, 'pedidoUnicentro')">PEDIDOS UNICENTRO</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1km4l9MG0tbd8agAly1ly73-N6WBYcfGds_8V8H9oQfg/edit?usp=drive_link" onclick="showModal(event, 'pedidoSanJavier')">PEDIDOS SAN JAVIER</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1z2QhfFNWyA8nBEhrxYpzQojzmW-LDywO074DCz0gpUQ/edit?usp=drive_link" onclick="showModal(event, 'pedidoColombia')">PEDIDOS COLOMBIA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1anceg3K-MJ5iOHkyc-yvu2GAh5qnkJLiEolpb4OqQqk/edit?usp=drive_link" onclick="showModal(event, 'pedidoLaMota')">PEDIDOS LA MOTA</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1GNnETTVIAsqOUoLWXxZLPgSUcsVc5wOJL3yj4HCEVTc/edit?usp=drive_link" onclick="showModal(event, 'pedidoAmerica')">PEDIDOS AMERICA</a></li>
     </ul>
 
     <!-- Bootstrap Modal -->
@@ -80,13 +83,37 @@
         </div>
     </div>
 
-
     <script>
         let targetUrl = '';
+        let requiredPassword = '';
 
-        function showModal(event) {
+        function showModal(event, type) {
             event.preventDefault();
             targetUrl = event.target.href;
+
+            // Set password based on link type
+            if (type) {
+                switch(type) {
+                    case 'pedidoUnicentro':
+                        requiredPassword = 'unicentro123';
+                        break;
+                    case 'pedidoSanJavier':
+                        requiredPassword = 'sanjavier123';
+                        break;
+                    case 'pedidoColombia':
+                        requiredPassword = 'colombia123';
+                        break;
+                    case 'pedidoLaMota':
+                        requiredPassword = 'lamota123';
+                        break;
+                    case 'pedidoAmerica':
+                        requiredPassword = 'america123';
+                        break;
+                    default:
+                        requiredPassword = '';
+                }
+            }
+
             var myModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
                 keyboard: false
             });
@@ -95,7 +122,7 @@
 
         function validatePassword() {
             const password = document.getElementById('password').value;
-            if (password === '123') {
+            if (password === requiredPassword) {
                 window.location.href = targetUrl;
             } else {
                 alert('Contraseña incorrecta');
