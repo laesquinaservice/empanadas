@@ -66,7 +66,7 @@
         <li><a href="https://docs.google.com/spreadsheets/d/14g7gDYysb5TUIjrE1zb8oFe1XXQ_42Qh_AbDUohnoi4/edit?usp=drive_link" onclick="showModal(event)">REMISIONES MOTA</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1mazP3FL4ukftvxqzt1FOADJ961PRjDa7Ll6TVoGARUA/edit?usp=drive_link" onclick="showModal(event)">REMISIONES AMÉRICA</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1IYsgG0FFrWZf8Al6Wvdp7DMk6PMkBPznJqcIuOAOZxM/edit?usp=drive_link" onclick="showModal(event)">TRANSFERENCIAS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1T5rgyfZ1DqLF7nCL2qw850G-zMD-ToudJBcdgQo0wHU/edit?usp=drive_link" onclick="showModal(event)">DESPACHOS PRODUCCION</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1T5rgyfZ1DqLF7nCL2qw850G-zMD-ToudJBcdgQo0wHU/edit?usp=drive_link" onclick="showModal(event,'despachos')">DESPACHOS PRODUCCION</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1TSYO7z8NibD5Gj-ptwJJFoOMGHYihe3JhNK4QWtIu40/edit?usp=drive_link" onclick="showModal(event, 'pedidoUnicentro')">PEDIDOS UNICENTRO</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1km4l9MG0tbd8agAly1ly73-N6WBYcfGds_8V8H9oQfg/edit?usp=drive_link" onclick="showModal(event, 'pedidoSanJavier')">PEDIDOS SAN JAVIER</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1z2QhfFNWyA8nBEhrxYpzQojzmW-LDywO074DCz0gpUQ/edit?usp=drive_link" onclick="showModal(event, 'pedidoColombia')">PEDIDOS COLOMBIA</a></li>
@@ -104,6 +104,9 @@
             // Set password based on link type
             if (type) {
                 switch(type) {
+                    case 'despachos':
+                        requiredPassword = 'despachos123';
+                    break;
                     case 'pedidoUnicentro':
                         requiredPassword = 'unicentro123';
                         break;
