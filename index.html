@@ -38,13 +38,21 @@
         .modal-content {
             text-align: center;
         }
+
+        @media(max-width:1080px){
+            max-width: 80%;
+        }
+        
     </style>
 </head>
 
 <body>
     <img src="top.PNG" alt="Top Image">
 
-    <ul>
+  <ul style="
+    max-width: 50%;
+    margin: 2rem auto;
+">
         <!-- Links will have onclick to show modal -->
         <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595" onclick="showModal(event)">CONTROL DE INGRESOS Y EGRESOS</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1Nejucnex2Srpadm36DQYM-8Pfs8R0bcMCt_Woo2VjjA/edit?gid=0#gid=0" onclick="showModal(event)">CONTROL DE INVENTARIO</a></li>
