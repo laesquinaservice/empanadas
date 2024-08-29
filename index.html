@@ -56,6 +56,15 @@
     margin: 2rem auto;
 ">
         <!-- Links will have onclick to show modal -->
+       <li><a href="https://docs.google.com/spreadsheets/d/1HZI_t2sXTBWE5Zz8jlC-gZnGTVJAfhfAl2fAelI4StE/edit?usp=sharing" onclick="showModal(event,'calidosas')">CONTROL DE AGUA</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1nWQQdjFZK3piba91gPYu8-1ydXMHCOjIl35W54f4jbA/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Mantenimiento 1</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1kmjUycZA1R-vDSmXtxcYUWnBs0i-Nj3SYguzBBNamr4/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Mantenimiento 2</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1y6-RvVa9Gwf8L9ehyDgmRXBsQf8NAy7HXfV4m_i18R0/edit?usp=sharing" onclick="showModal(event,'calidosas')">Mantenimiento observaciones</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/18OZelpweq0lDPUcxu6-uMCqIH8NvrPtfd2U6xZ9mnjE/edit?usp=sharing" onclick="showModal(event,'calidosas')">Control aceite</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1hsn8y7z9QeOnHY1PGQ0xKp9a2XLRfArKqTcmq5-RyEU/edit?usp=sharing" onclick="showModal(event,'calidosas')">Control temperatura amarilla</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1hsn8y7z9QeOnHY1PGQ0xKp9a2XLRfArKqTcmq5-RyEU/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Control temperaturas</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1MATOK7QyG3kkDoK7-LO5YYPLLvtgA-bY6kqmQjACMO0/edit?usp=sharing" onclick="showModal(event,'calidosas')">Control averias</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1RYBwQDUkBKmr_H9zyB8EUAjzT5ookYCIBPGv-ClKHG8/edit?usp=sharing" onclick="showModal(event,'calidosas')">Control rotulacion aji/jalapeño</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595" onclick="showModal(event)">CONTROL DE INGRESOS Y EGRESOS</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1Nejucnex2Srpadm36DQYM-8Pfs8R0bcMCt_Woo2VjjA/edit?gid=0#gid=0" onclick="showModal(event)">CONTROL DE INVENTARIO</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1R2wNwts_m-hTgeHmfSopzi_rkxPON5rJhqkxmEBsW78/edit?usp=drive_link" onclick="showModal(event)">COMPRAS</a></li>
@@ -104,8 +113,11 @@
             // Set password based on link type
             if (type) {
                 switch(type) {
+                    case 'calidosas':
+                        requiredPassword = 'Calidosas456';
+                    break;
                     case 'despachos':
-                        requiredPassword = 'despachos123';
+                        requiredPassword = 'Calidosas456';
                     break;
                     case 'pedidoUnicentro':
                         requiredPassword = 'unicentro123';
