@@ -15,14 +15,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 
     <script>
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    alert('El clic derecho está deshabilitado en esta página.'); 
-});
-
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('El clic derecho está deshabilitado en esta página.'); 
+        });
     </script>
 
-    
     <style>
         body {
             background-color: black;
@@ -54,146 +52,21 @@ document.addEventListener('contextmenu', function(e) {
                 max-width: 80%;
             }
         }
-        
+
     </style>
 </head>
 
 <body>
     <img src="top.PNG" alt="Top Image">
 
-  <ul style="
-    max-width: 50%;
-    margin: 2rem auto;
-">
+    <ul style="max-width: 50%; margin: 2rem auto;">
         <!-- Links will have onclick to show modal -->
-      <li><a href="https://docs.google.com/spreadsheets/d/1TvHSsoZudUz9MLRyiRlxbw799p93O2UVL7uIQUkJQrU/edit?usp=drive_link" onclick="showModal(event,'transferenciasu123')">Transferencias unicentro</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1LjOf7-X6W8dYimjPPfGp06j2sSujE-QR8qBg5a96v8E/edit?usp=drive_link" onclick="showModal(event,'transferenciasj123')">Transferencias san javier</a></li>
-      
-      <li><a href="https://docs.google.com/spreadsheets/d/18XlPhXzXM9EWtEJwGx6KWUsVFdHnu8jb9PXbhUc5yj8/edit?usp=drive_link" onclick="showModal(event,'nominaunicentro123')">Facturas nomina san unicentro</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1VVI__2zK-WYGwTqe45-UYfVQ46iWrnBthnmAgvKhix4/edit?usp=drive_link" onclick="showModal(event,'nominasanjavier123')">Facturas nomina san javier</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1_19D0GcpZ9iC55oFoyD2KKx7DNlbdgrBkjy6fkCU6NA/edit?usp=drive_link" onclick="showModal(event,'ingresosunicentro123')">Control de ingresos y egresos unicentro</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/14xJhsEzmLjnu_VDTqOT2J7MtueHEaJ_R3-j2vz-EcEM/edit?usp=drive_link" onclick="showModal(event,'ingresosanjavier123')">Control de ingresos y egresos san javier</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1TSVwMM-NK8zsent-GZENBfeNTApS3dzaI3WOlTqly3Y/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Leche</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1TvHSsoZudUz9MLRyiRlxbw799p93O2UVL7uIQUkJQrU/edit?usp=drive_link" onclick="showModal(event,'transferenciasu123')">Transferencias unicentro</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1LjOf7-X6W8dYimjPPfGp06j2sSujE-QR8qBg5a96v8E/edit?usp=drive_link" onclick="showModal(event,'transferenciasj123')">Transferencias san javier</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/18XlPhXzXM9EWtEJwGx6KWUsVFdHnu8jb9PXbhUc5yj8/edit?usp=drive_link" onclick="showModal(event,'nominaunicentro123')">Facturas nomina san unicentro</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1VVI__2zK-WYGwTqe45-UYfVQ46iWrnBthnmAgvKhix4/edit?usp=drive_link" onclick="showModal(event,'nominasanjavier123')">Facturas nomina san javier</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1_19D0GcpZ9iC55oFoyD2KKx7DNlbdgrBkjy6fkCU6NA/edit?usp=drive_link" onclick="showModal(event,'ingresosunicentro123')">Control de ingresos y egresos unicentro</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/14xJhsEzmLjnu_VDTqOT2J7MtueHEaJ_R3-j2vz-EcEM/edit?usp=drive_link" onclick="showModal(event,'ingresosanjavier123')">Control de ingresos y egresos san javier</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1TSVwMM-NK8zsent-GZENBfeNTApS3dzaI3WOlTqly3Y/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Leche</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1ofoVwSc2NmBL57AyKaGy9BRRpzAdumhSXyY9-fsLRzk/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Contactos</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1nWQQdjFZK3piba91gPYu8-1ydXMHCOjIl35W54f4jbA/edit?usp=drive_link" >ASEO</a></li>
-       <li><a href="https://docs.google.com/spreadsheets/d/1HZI_t2sXTBWE5Zz8jlC-gZnGTVJAfhfAl2fAelI4StE/edit?usp=sharing" >CONTROL DE AGUA</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/13RqYP3JfGUq1ccU2YZcVoDyU2f33iuSBHGLS3755xA0/edit?gid=0#gid=0" onclick="showModal(event,'calidosas')">Mantenimiento 1</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1kmjUycZA1R-vDSmXtxcYUWnBs0i-Nj3SYguzBBNamr4/edit?usp=drive_link" onclick="showModal(event,'calidosas')">Mantenimiento 2</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1y6-RvVa9Gwf8L9ehyDgmRXBsQf8NAy7HXfV4m_i18R0/edit?usp=sharing" onclick="showModal(event,'calidosas')">Mantenimiento observaciones</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/18OZelpweq0lDPUcxu6-uMCqIH8NvrPtfd2U6xZ9mnjE/edit?usp=sharing" >Control aceite</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1hsn8y7z9QeOnHY1PGQ0xKp9a2XLRfArKqTcmq5-RyEU/edit?usp=sharing" >Control temperatura amarilla</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1hsn8y7z9QeOnHY1PGQ0xKp9a2XLRfArKqTcmq5-RyEU/edit?usp=drive_link" >Control temperaturas</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1MATOK7QyG3kkDoK7-LO5YYPLLvtgA-bY6kqmQjACMO0/edit?usp=sharing" >Control averias</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1RYBwQDUkBKmr_H9zyB8EUAjzT5ookYCIBPGv-ClKHG8/edit?usp=sharing" >Control rotulacion aji/jalapeño</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1GlMy-SxUzYels2jjugFkL69egvC9jGCHcrPZo4OzrSA/edit?gid=997475595#gid=997475595" onclick="showModal(event,'calidosas')">CONTROL DE INGRESOS Y EGRESOS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1Nejucnex2Srpadm36DQYM-8Pfs8R0bcMCt_Woo2VjjA/edit?gid=0#gid=0" onclick="showModal(event,'calidosas')">CONTROL DE INVENTARIO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1R2wNwts_m-hTgeHmfSopzi_rkxPON5rJhqkxmEBsW78/edit?usp=drive_link" onclick="showModal(event,'calidosas')">COMPRAS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1jzoBN4pW8LshIFg047iEe8r4f-woVgfUyHgJki-C17Y/edit?usp=drive_link" onclick="showModal(event,'calidosas')">REMISIONES COLOMBIA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1qF9cvhWT3qXBHq4AuIaVv9fmu1SBC0OYPKTmwEPOTFk/edit?usp=drive_link" onclick="showModal(event,'calidosas')">NOMINA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1H39me4wDP0_flH4MmJmEdSgabZ9uQvU1zRfGpA8vgWk/edit?usp=drive_link" onclick="showModal(event,'calidosas')">REMISIONES SAN JAVIER</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1AvgSLPZKMx7IWDKCo5hMSLUjd4Lmk6_Wa_f2lrPmikc/edit?usp=drive_link" onclick="showModal(event,'calidosas')">REMISIONES UNICENTRO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/14g7gDYysb5TUIjrE1zb8oFe1XXQ_42Qh_AbDUohnoi4/edit?usp=drive_link" onclick="showModal(event,'calidosas')">REMISIONES MOTA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1mazP3FL4ukftvxqzt1FOADJ961PRjDa7Ll6TVoGARUA/edit?usp=drive_link" onclick="showModal(event,'calidosas')">REMISIONES AMÉRICA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1IYsgG0FFrWZf8Al6Wvdp7DMk6PMkBPznJqcIuOAOZxM/edit?usp=drive_link" onclick="showModal(event,'calidosas')">TRANSFERENCIAS</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1T5rgyfZ1DqLF7nCL2qw850G-zMD-ToudJBcdgQo0wHU/edit?usp=drive_link" onclick="showModal(event,'despachos')">DESPACHOS PRODUCCION</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1TSYO7z8NibD5Gj-ptwJJFoOMGHYihe3JhNK4QWtIu40/edit?usp=drive_link" onclick="showModal(event, 'pedidoUnicentro')">PEDIDOS UNICENTRO</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1km4l9MG0tbd8agAly1ly73-N6WBYcfGds_8V8H9oQfg/edit?usp=drive_link" onclick="showModal(event, 'pedidoSanJavier')">PEDIDOS SAN JAVIER</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1z2QhfFNWyA8nBEhrxYpzQojzmW-LDywO074DCz0gpUQ/edit?usp=drive_link" onclick="showModal(event, 'pedidoColombia')">PEDIDOS COLOMBIA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1anceg3K-MJ5iOHkyc-yvu2GAh5qnkJLiEolpb4OqQqk/edit?usp=drive_link" onclick="showModal(event, 'pedidoLaMota')">PEDIDOS LA MOTA</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1GNnETTVIAsqOUoLWXxZLPgSUcsVc5wOJL3yj4HCEVTc/edit?usp=drive_link" onclick="showModal(event, 'pedidoAmerica')">PEDIDOS AMERICA</a></li>
-    </ul>
-
-    <!-- Bootstrap Modal -->
-    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ingrese su contraseña</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="password" id="password" class="form-control" placeholder="Contraseña">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="validatePassword()">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let targetUrl = '';
-        let requiredPassword = '';
-
-        function showModal(event, type) {
-            event.preventDefault();
-            targetUrl = event.target.href;
-
-            // Set password based on link type
-            if (type) {
-                switch(type) {
-                    case 'calidosas':
-                        requiredPassword = 'Calidosas456';
-                    break;
-                    case 'despachos':
-                        requiredPassword = 'despachos456';
-                    break;
-                    case 'pedidoUnicentro':
-                        requiredPassword = 'unicentro123';
-                        break;
-                    case 'pedidoSanJavier':
-                        requiredPassword = 'sanjavier123';
-                        break;
-                    case 'pedidoColombia':
-                        requiredPassword = 'colombia123';
-                        break;
-                    case 'pedidoLaMota':
-                        requiredPassword = 'lamota123';
-                        break;
-                    case 'pedidoAmerica':
-                        requiredPassword = 'america123';
-                        break;
-                    case 'ingresosanjavier123':
-                        requiredPassword = 'ingresosanjavier123';
-                    break;  
-                    case 'nominasanjavier123':
-                        requiredPassword = 'nominasanjavier123';
-                    break;  
-                    case 'ingresosanjavier123':
-                        requiredPassword = 'ingresosanjavier123';
-                    break;
-                    case 'ingresosunicentro123':
-                        requiredPassword = 'ingresosunicentro123';
-                    break;  
-                    case 'nominaunicentro123':
-                        requiredPassword = 'nominaunicentro123';
-                    break;
-                    case 'transferenciasj123':
-                        requiredPassword = 'transferenciasj123';
-                    break;
-                    case 'transferenciasu123':
-                        requiredPassword = 'transferenciasu123';
-                    break;
-                    default:
-                        requiredPassword = '';
-                }
-            }
-
-            var myModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
-                keyboard: false
-            });
-            myModal.show();
-        }
-
-        function validatePassword() {
-            const password = document.getElementById('password').value;
-            if (password === requiredPassword) {
-                window.location.href = targetUrl;
-            } else {
-                alert('Contraseña incorrecta');
-            }
-        }
-    </script>
-</body>
-</html>
+        <li><a hre
